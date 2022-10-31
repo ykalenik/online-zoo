@@ -103,3 +103,55 @@ body {
 .watch-animal-call-to-action button:hover {
     background-color: #E47209;
 }
+
+.backstage-section {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "backstage-photo backstage-text backstage-flower-photo";
+}
+
+.backstage-photo {
+    grid-area: "backstage-photo";
+    padding-left: 220px;
+    padding-right: 80px;
+}
+
+.backstage-text {
+    grid-area: "backstage-text";
+    padding-right: 20px;
+}
+
+.backstage-text h2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #333B41;
+    margin: 20px 0;
+}
+
+.backstage-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.backstage-text h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+
+}
+
+.backstage-photo,
+.backstage-text {
+    padding-top: 140px;
+    padding-bottom: 180px;
+}
+
+.backstage-flower-photo {
+    grid-area: "backstage-flower-photo";
+    padding-top: 10px;
+}
