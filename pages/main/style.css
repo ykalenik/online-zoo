@@ -86,7 +86,7 @@ body {
 }
 
 .watch-animal-call-to-action button {
-    padding: 16px 0 16px 5px;
+    padding: 16px;
     text-transform: uppercase;
     text-align: center;
     color: white;
@@ -112,13 +112,13 @@ body {
 }
 
 .backstage-photo {
-    grid-area: "backstage-photo";
+    grid-area: backstage-photo;
     padding-left: 220px;
     padding-right: 80px;
 }
 
 .backstage-text {
-    grid-area: "backstage-text";
+    grid-area: backstage-text;
     padding-right: 20px;
 }
 
@@ -152,6 +152,150 @@ body {
 }
 
 .backstage-flower-photo {
-    grid-area: "backstage-flower-photo";
+    grid-area: backstage-flower-photo;
     padding-top: 10px;
+}
+
+.pets-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.pets-section::before {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: 1px;
+    width: 290px;
+    height: 460px;
+    background-image: url('../../assets/images/palm_foto.png');
+    z-index: 0;
+}
+
+.pets-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: 1px;
+    width: 370px;
+    height: 275px;
+    background-image: url('../../assets/images/strelitzia.png');
+    z-index: 0;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-areas:
+        "previous-pet-btn first-pet-row next-pet-btn"
+        "previous-pet-btn second-pet-row next-pet-btn";
+    margin: 0 auto 40px auto;
+}
+
+.previous-pet-btn {
+    grid-area: previous-pet-btn;
+}
+
+.next-pet-btn {
+    grid-area: next-pet-btn;
+}
+
+.previous-pet-btn,
+.next-pet-btn {
+    margin: auto 0;
+}
+
+.first-pet-row {
+    grid-area: first-pet-row;
+}
+
+.second-pet-row {
+    grid-area: second-pet-row;
+}
+
+.first-pet-row,
+.second-pet-row {
+    display: flex;
+}
+
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    border: orange 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+    z-index: 1;
+}
+
+.pet-card-description {
+    display: flex;
+    align-items: center;
+}
+
+.pet-card-header {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.pet-card-header h3 {
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.pet-card-header p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.pet-card-food-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.previous-pet-btn,
+.next-pet-btn {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: #FE9013;
+    border: none;
+    cursor: pointer;
+}
+
+.previous-pet-btn:hover,
+.next-pet-btn:hover {
+    background-color: #E47209;
+}
+
+.choose-favorite-pet-btn {
+    margin: auto;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FE9013;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.choose-favorite-pet-btn:hover {
+    background-color: #E47209;
 }
