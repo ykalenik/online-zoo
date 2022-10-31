@@ -11,6 +11,29 @@ body {
     }
 }
 
+button {
+    padding: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 140%;
+    background-color: #FE9013;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E47209;
+}
+
+button:active {
+    background-color: green;
+}
+
 .header {
     display: flex;
     position: relative;
@@ -85,24 +108,7 @@ body {
     color: #FFEE2E;
 }
 
-.watch-animal-call-to-action button {
-    padding: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 140%;
-    background-color: #FE9013;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-}
 
-.watch-animal-call-to-action button:hover {
-    background-color: #E47209;
-}
 
 .backstage-section {
     position: relative;
@@ -177,7 +183,7 @@ body {
 .pets-section::after {
     content: '';
     position: absolute;
-    bottom: -80px;
+    bottom: -20px;
     right: 1px;
     width: 370px;
     height: 275px;
@@ -276,26 +282,138 @@ body {
     cursor: pointer;
 }
 
-.previous-pet-btn:hover,
-.next-pet-btn:hover {
-    background-color: #E47209;
+.choose-favorite-pet-btn-wrapper {
+    margin: auto auto 100px auto;
 }
 
-.choose-favorite-pet-btn {
-    margin: auto;
-    padding: 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
+.peek-friend-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    z-index: 1;
+}
+
+.peek-friend-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    margin: 70px 220px 100px 220px;
+    border-radius: 10px;
+}
+
+.peek-friend-info h2 {
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
     text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #FE9013;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
+    color: #FE9013;
 }
 
-.choose-favorite-pet-btn:hover {
-    background-color: #E47209;
+.peek-friend-info h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.peek-friend-info a {
+    text-decoration: none;
+    color: #333B41;
+    border-bottom: 1px solid #FE9013;
+}
+
+.peek-friend-info a:hover {
+    color: #F9804B;
+}
+
+.peek-friend-msg {
+    margin: auto 50px auto 100px;
+}
+
+.peek-friend-info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.find-friend-apreciation-msg {
+    margin: 0 auto 10px auto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+}
+
+.donation-process-info {
+    display: grid;
+    grid-template-areas:
+        "card      arrow1 payment      arrow2 happy-monkey"
+        "card-desc .      payment-desc .      happy-monkey-desc";
+}
+
+.card {
+    grid-area: card;
+}
+
+.arrow1 {
+    grid-area: arrow1;
+}
+
+.payment {
+    grid-area: payment;
+}
+
+.arrow2 {
+    grid-area: arrow2;
+}
+
+.happy-monkey {
+    grid-area: happy-monkey;
+}
+
+.card-desc {
+    grid-area: card-desc;
+}
+
+.payment-desc {
+    grid-area: payment-desc;
+}
+
+.happy-monkey-desc {
+    grid-area: happy-monkey-desc;
+}
+
+.card,
+.payment,
+.happy-monkey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    border: orange 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.arrow1,
+.arrow2 {
+    margin: auto 30px;
+    width: 70px;
+    height: 35px;
+}
+
+.card-desc,
+.payment-desc,
+.happy-monkey-desc {
+    width: 170px;
+}
+
+.feed-friend-btn-wrapper {
+    margin: 30px auto 60px auto;
 }
