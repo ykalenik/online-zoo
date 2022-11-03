@@ -222,6 +222,7 @@ footer {
 .previous-pet-btn,
 .next-pet-btn {
     margin: auto 0;
+    padding: 0;
 }
 
 .first-pet-row {
