@@ -43,16 +43,33 @@ footer {
     background-color: #111115;
 }
 
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+}
+
 .header {
     display: flex;
-    position: relative;
-    gap: 58px;
-    padding-left: 220px;
     align-items: center;
-    background-color: black;
+    width: 100%;
+    padding: 0 220px 0 220px;
+    max-width: 1160px;
     font-style: normal;
     color: #FDFDFF;
-    z-index: 1;
+}
+
+.header nav {
+    display: flex;
+    width: 100%;
+    gap: 58px;
+}
+
+.header a:last-child {
+    margin-left: auto;
 }
 
 .header a {
@@ -71,6 +88,7 @@ footer {
 .logo {
     width: 82px;
     height: 52px;
+    padding-right: 63px;
 }
 
 .header h1 {
