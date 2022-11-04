@@ -263,7 +263,15 @@ footer {
     border-radius: 5px;
     margin: 10px;
     background-color: white;
+    cursor: pointer;
     z-index: 1;
+}
+
+.pet-card img {
+    transition: 200ms transform ease-in-out;
+}
+.pet-card:hover img {
+    transform: scale(1.05);
 }
 
 .pet-card-description {
