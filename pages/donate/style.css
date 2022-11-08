@@ -140,6 +140,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
     height: 20px;
     width: 100%;
     background: #404950;
@@ -157,6 +158,22 @@ main {
 
 .payment-slider-wrapper:last-of-type {
     padding-right: 25px;
+}
+
+.payment-slider-wrapper label {
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+    cursor: pointer;
+}
+
+.payment-slider-wrapper>input[type="radio"]:checked+label {
+    color: #FE9013;
 }
 
 .checked {
@@ -178,6 +195,7 @@ main {
     /* Not removed via appearance */
     margin: 0;
     font: inherit;
+    cursor: pointer;
     width: 10px;
     height: 10px;
     border: none;
@@ -194,39 +212,14 @@ main {
     background-color: #72828E;
 }
 
-
 .payment-slider input[type="radio"]:checked {
     outline: 2px solid #FE9013;
     outline-offset: 6px;
 }
 
-.payment-slider input[type="radio"]:checked+.checked {
+.payment-slider input[type="radio"]:checked~.checked {
     display: inherit;
 }
-
-.payment-amount {
-    display: flex;
-    gap: 70px;
-    width: 100%;
-}
-
-.payment-amount label {
-    padding: 10px 0 20px 0;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: #333B41;
-}
-
-.payment-amount p {
-    margin-left: -15px;
-}
-
-.payment-amount-selected {
-    color: #FE9013 !important;
-}
-
 
 .custom-payment-amount {
     position: relative;
@@ -240,7 +233,10 @@ main {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    background: rgba(255, 255, 255, 0.52);
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 2px;
+    color: #929699;
 }
 
 .currency {
