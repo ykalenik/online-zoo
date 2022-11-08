@@ -186,6 +186,14 @@ main {
     z-index: 1;
 }
 
+.payment-slider-line {
+    position: absolute;
+    height: 2px;
+    width: 926px;
+    margin: 0 25px 0 25px;
+    background-color: #72828E;
+}
+
 
 .payment-slider input[type="radio"]:checked {
     outline: 2px solid #FE9013;
