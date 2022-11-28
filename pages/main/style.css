@@ -99,6 +99,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -124,20 +125,21 @@
     z-index: 0;
 }
 
-.pets-grid {
-    display: grid;
-    grid-template-areas:
-        "previous-pet-btn first-pet-row next-pet-btn"
-        "previous-pet-btn second-pet-row next-pet-btn";
+.pets-wrapper {
+    position: relative;
     margin: 0 auto 40px auto;
 }
 
 .previous-pet-btn {
-    grid-area: previous-pet-btn;
+    position: absolute;
+    left: -62px;
+    top: 410px;
 }
 
 .next-pet-btn {
-    grid-area: next-pet-btn;
+    position: absolute;
+    right: -62px;
+    top: 410px;
 }
 
 .previous-pet-btn,
@@ -147,11 +149,9 @@
 }
 
 .first-pet-row {
-    grid-area: first-pet-row;
 }
 
 .second-pet-row {
-    grid-area: second-pet-row;
 }
 
 .first-pet-row,
@@ -175,6 +175,10 @@
 }
 .pet-card:hover img {
     transform: scale(1.05);
+}
+
+.pet-card > img {
+    width: 100%;
 }
 
 .pet-card-description {
@@ -497,4 +501,83 @@
     height: 50px;
     width: 300px;
     border-radius: 8px;
+}
+
+@media(max-width: 1000px) {
+    .watch-animal-section {
+        background-position: top;
+        background-size: cover;
+        padding-bottom: 0;
+    }
+
+    .watch-animal-call-to-action h2 {
+        margin-top: 10%;
+        margin-right: 20%;
+    }
+
+    .watch-animal-call-to-action {
+        padding-bottom: 5%;
+    }
+
+    .backstage-flower-photo {
+        display: none;
+    }
+
+    .watch-animal-call-to-action {
+        margin-right: 5%;
+    }
+
+    .backstage-photo {
+        margin: 0;
+        width: 450px;
+        height: 400px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pets-wrapper {
+        width: 1000px;
+    }
+
+    .first-pet-row {
+        margin-bottom: 60px;
+    }
+
+    .previous-pet-btn {
+        top: 390px;
+        left: 350px;
+    }
+
+    .next-pet-btn {
+        top: 390px;
+        right: 350px;
+    }
+    .pets-section::before {
+        bottom: -40px;
+        left: 1px;
+        width: 145px;
+        height: 230px;
+        background-size: cover;
+    }
+
+    .pets-section::after {
+        bottom: 0px;
+        right: 1px;
+        width: 180px;
+        height: 135px;
+        background-size: cover;
+    }
+
+    .peek-friend-info {
+       margin: 50px 30px;
+    }
+
+
+    .testimonials-user-feedback .testimonial:last-child{
+        display: none;
+    }
+
+    .testimonials::before {
+        bottom: -160px;
+    }
 }

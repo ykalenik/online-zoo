@@ -5,12 +5,6 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 1600px) {
-    body {
-        width: 1600px;
-    }
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -277,4 +271,34 @@ footer {
     width: 16px;
     height: 16px;
     padding: 10px 0 0 10px;
+}
+
+@media(max-width: 1600px) {
+    body {
+        width: 1600px;
+    }
+}
+
+
+@media(max-width: 1000px) {
+    body {
+        width: 1000px;
+    }
+
+    .header {
+        max-width: 100%;
+        padding: 0 0 0 10px;
+    }
+
+    .header nav a:last-child {
+        margin-left: unset;
+    }
+
+    .footer-content {
+        max-width: 90%;
+    }
+
+    .footer-logo-donate-btn {
+        margin-left: 0;
+    }
 }
