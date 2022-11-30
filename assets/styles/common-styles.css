@@ -273,6 +273,15 @@ footer {
     padding: 10px 0 0 10px;
 }
 
+.burger-menu {
+    display: none;
+}
+
+.footer-links-small {
+    display: none;
+    list-style: none;
+}
+
 @media(max-width: 1600px) {
     body {
         width: 1600px;
@@ -301,4 +310,59 @@ footer {
     .footer-logo-donate-btn {
         margin-left: 0;
     }
+}
+
+@media(max-width: 640px){
+    .header nav a {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+
+    .footer-subscribe-form {
+        display: none;
+    }
+
+    .footer-links ul {
+        display: none;
+    }
+
+    .footer-icon {
+        width: 52px;
+        height: 52px;
+        background-size: cover;
+    }
+
+    .footer-icon span {
+        width: 42px;
+        height: 42px;
+    } 
+
+    .footer-links-small {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .footer-links nav {
+        margin-left: 0;
+    }
+
+    .footer-links {
+        font-size: x-large;
+        padding: 20px 0 20px 0;
+    }
+
+    .footer-logo-donate-btn img {
+        width: 100px;
+        height: 70px;
+    }
+
+
+
 }
