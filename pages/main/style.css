@@ -352,6 +352,10 @@
     width: 70px;
     height: 35px;
 }
+.arrow1 img:first-child,
+.arrow2 img:first-child {
+    display: none;
+}
 
 .card-desc,
 .payment-desc,
@@ -572,12 +576,134 @@
        margin: 50px 30px;
     }
 
-
     .testimonials-user-feedback .testimonial:last-child{
         display: none;
     }
 
     .testimonials::before {
         bottom: -160px;
+    }
+}
+
+@media(max-width: 640px){
+    .backstage-photo {
+        display: none;
+    }
+
+    .backstage-flower-photo {
+        display: grid;
+        grid-area: backstage-flower-photo;
+        width: 180px;
+        height: 470px;
+        background-size: cover;
+    }
+
+    .backstage-section {
+        grid-template-areas:
+        "backstage-text backstage-flower-photo";
+    }
+
+    .pets-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .backstage-text {
+        padding-bottom: 0;
+    }
+
+    .pet-card {
+        margin: 20px;
+    }
+
+    .first-pet-row .pet-card:last-child {
+        display: none;
+    }
+
+    .second-pet-row .pet-card:last-child {
+        display: none;
+    }
+
+    .previous-pet-btn {
+        top: 460px;
+        left: 30%;
+    }
+
+    .previous-pet-btn .next-pet-btn {
+        width: 100px;
+        height: 100px;
+        margin: 0.5%;
+    }
+
+    .next-pet-btn {
+        top: 460px;
+        right: 30%;
+    }
+
+    .peek-friend-info {
+        margin: 20px 0;
+    }
+     .peek-friend-msg {
+        margin: auto 2% auto 2%;
+     }
+
+     .find-friend-apreciation-msg {
+        font-size: xx-large;
+     }
+
+     .peek-friend-info p {
+        font-size: large;
+
+     }
+
+     .arrow1 img:last-child,
+     .arrow2 img:last-child {
+        display: none;
+     }
+
+     .arrow1 img:first-child,
+     .arrow2 img:first-child {
+        display: block;
+    }
+
+    .donation-process-info {
+        display:grid;
+    }
+
+    .arrow1, .arrow2 {
+        position: relative;
+        margin: 0;
+        width: 40px;
+        height: 100%;
+    }
+
+    .green-arrow {
+        position:absolute;
+        top: -15px;
+        left: -35px;
+    }
+
+    .testimonials h2 {
+        font-size: xxx-large;
+        margin: 40px 0 30px 0;
+    }
+
+    .testimonials-user-feedback {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        width: 95%;
+        height: 150px;
+        margin: 0 auto 0 auto;
+    }
+
+    .testimonial-btn {
+        margin: 50px auto;
+    }
+
+    .testimonial-scroll {
+        display: none;
     }
 }
