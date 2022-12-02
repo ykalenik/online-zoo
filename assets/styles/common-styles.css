@@ -284,16 +284,12 @@ footer {
 
 @media(max-width: 1600px) {
     body {
-        width: 1600px;
+        width: 100vw;
     }
 }
 
 
 @media(max-width: 1000px) {
-    body {
-        width: 1000px;
-    }
-
     .header {
         max-width: 100%;
         padding: 0 0 0 10px;
@@ -313,10 +309,6 @@ footer {
 }
 
 @media(max-width: 640px){
-    body {
-        width: 640px;
-    }
-
     .header nav a {
         display: none;
     }
@@ -344,14 +336,13 @@ footer {
     .footer-icon span {
         width: 42px;
         height: 42px;
-    } 
+    }
 
     .footer-links-small {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-
 
     .footer-links nav {
         margin-left: 0;
@@ -366,7 +357,5 @@ footer {
         width: 100px;
         height: 70px;
     }
-
-
 
 }
