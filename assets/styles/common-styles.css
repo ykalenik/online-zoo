@@ -313,6 +313,10 @@ footer {
 }
 
 @media(max-width: 640px){
+    body {
+        width: 640px;
+    }
+
     .header nav a {
         display: none;
     }
