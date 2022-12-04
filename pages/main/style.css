@@ -45,20 +45,24 @@
 
 .backstage-section {
     position: relative;
-    display: grid;
-    grid-template-areas:
-        "backstage-photo backstage-text backstage-flower-photo";
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.backstage-photo {
-    grid-area: backstage-photo;
-    padding-left: 220px;
-    padding-right: 80px;
+.backstage-section::after {
+    position: absolute;
+    content: '';
+    width: 204px;
+    height: 613px;
+    background-image: url('../../assets/images/flower_foto1.png');
+    top: 0;
+    right: 1px;
+    z-index: 0;
 }
 
 .backstage-text {
-    grid-area: backstage-text;
-    padding-right: 20px;
+    padding-right: 214px;
 }
 
 .backstage-text h2 {
@@ -84,8 +88,7 @@
 
 }
 
-.backstage-photo,
-.backstage-text {
+.backstage-photo {
     padding-top: 140px;
     padding-bottom: 180px;
 }
@@ -148,12 +151,6 @@
     padding: 0;
 }
 
-.first-pet-row {
-}
-
-.second-pet-row {
-}
-
 .first-pet-row,
 .second-pet-row {
     display: flex;
@@ -161,6 +158,8 @@
 
 .pet-card {
     display: flex;
+    width: 366px;
+    height: 426px;
     flex-direction: column;
     border: orange 1px solid;
     border-radius: 5px;
@@ -178,7 +177,9 @@
 }
 
 .pet-card > img {
+    height: auto;
     width: 100%;
+    display: block;
 }
 
 .pet-card-description {
@@ -507,11 +508,66 @@
     border-radius: 8px;
 }
 
+@media(max-width: 1600px) {
+
+    .watch-animal-call-to-action {
+        margin-right: 5%;
+    }
+
+    .backstage-photo {
+        margin: auto;
+        width: 30vw;
+        padding: 0;
+    }
+}
+
+@media(max-width:1360px) {
+    .pet-card {
+        width: 280px;
+        height: 354px;
+    }
+}
+
+@media(max-width:1200px)  {
+
+    .watch-animal-call-to-action::before {
+        width: 350px;
+        height: 350px;
+        line-height: 55px;
+        margin-top: 20px;
+    }
+
+    .watch-animal-call-to-action h2 {
+        font-size: 60px;
+        line-height: 48px;
+        width: 350px;
+        padding-bottom: 20px;
+    }
+
+    .backstage-section::after  {
+        width: 150px;
+        height: 500px;
+        top:auto;
+    }
+
+    .pet-card {
+        width: 294px;
+        height: 320px;
+    }
+}
+
+
 @media(max-width: 1000px) {
+
+    .pet-card {
+        width: 260px;
+        height: 310px;
+    }
+
     .watch-animal-section {
         background-position: top;
         background-size: cover;
-        padding-bottom: 0;
+        padding-bottom: 10px;
     }
 
     .watch-animal-call-to-action h2 {
@@ -523,8 +579,12 @@
         padding-bottom: 5%;
     }
 
-    .backstage-flower-photo {
+    .backstage-section::after {
         display: none;
+    }
+
+    .backstage-text {
+        padding-right: 10px;
     }
 
     .watch-animal-call-to-action {
@@ -533,28 +593,23 @@
 
     .backstage-photo {
         margin: 0;
-        width: 450px;
-        height: 400px;
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .pets-wrapper {
-        width: 1000px;
-    }
 
     .first-pet-row {
-        margin-bottom: 60px;
+        margin-bottom: 110px;
     }
 
     .previous-pet-btn {
-        top: 390px;
-        left: 350px;
+        top: 360px;
+        left: 30%;
     }
 
     .next-pet-btn {
-        top: 390px;
-        right: 350px;
+        top: 360px;
+        right: 30%;
     }
     .pets-section::before {
         bottom: -40px;
@@ -586,35 +641,58 @@
 }
 
 @media(max-width: 640px){
+
+    .watch-animal-call-to-action {
+        align-self: flex-end;
+        width:90%;
+    }
+
+    .watch-animal-call-to-action h2 {
+        align-self: flex-end;
+        margin: 20px 0 5px 0px;
+    }
+
+    .watch-animal-call-to-action::before {
+        right: 10px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .watch-animal-call-to-action button {
+        align-self: flex-start;
+        width: 45%;
+    }
+
     .backstage-photo {
         display: none;
     }
 
-    .backstage-flower-photo {
-        display: grid;
-        grid-area: backstage-flower-photo;
-        width: 180px;
-        height: 470px;
+    .backstage-section::after {
+        display: block;
+        width: 100px;
+        height: 400px;
         background-size: cover;
-    }
-
-    .backstage-section {
-        grid-template-areas:
-        "backstage-text backstage-flower-photo";
-    }
-
-    .pets-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     }
 
     .backstage-text {
         padding-bottom: 0;
     }
 
+    .backstage-photo {
+        display: none;
+    }
+
+    .pets-wrapper {
+        width: 640px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .pet-card {
         margin: 20px;
+        width: 220px;
+        height: 290px;
     }
 
     .first-pet-row .pet-card:last-child {
@@ -626,7 +704,6 @@
     }
 
     .previous-pet-btn {
-        top: 460px;
         left: 30%;
     }
 
@@ -637,7 +714,6 @@
     }
 
     .next-pet-btn {
-        top: 460px;
         right: 30%;
     }
 
@@ -706,4 +782,44 @@
     .testimonial-scroll {
         display: none;
     }
+}
+
+@media(max-width: 320px) {
+    .first-pet-row, .second-pet-row {
+        flex-direction: column;
+    }
+    
+    .previous-pet-btn, .next-pet-btn {
+        display: none;
+    }
+
+    .pet-card {
+        width: 220px;
+        height: 290px;
+    }
+    
+    .pets-wrapper {
+        margin: 0;
+    }
+     
+    .first-pet-row {
+        margin-bottom: 8px;
+    }
+
+    .pets-section::after{
+        width: 150px;
+        height: 110px;
+
+    }
+    .pets-section::before {
+        width: 80px;
+        height: 180px;
+    }
+    .donation-process-info {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+
+
 }
