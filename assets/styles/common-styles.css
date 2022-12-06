@@ -56,26 +56,26 @@ footer {
     color: #FDFDFF;
 }
 
-.header nav {
+.nav {
     display: flex;
     width: 100%;
     gap: 58px;
 }
 
-.header a:last-child {
+.nav a:last-child {
     margin-left: auto;
 }
 
-.header a {
+.nav a {
     color: #FDFDFF;
 }
 
-.header a:hover {
+.nav a:hover {
     color: #F9804B;
 }
 
 .nav-link-highlited,
-.header .nav-link-highlited {
+.nav .nav-link-highlited {
     color: #F9804B;
 }
 
@@ -88,6 +88,58 @@ footer {
 .header h1 {
     margin: 14px 0;
 }
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s easy-in-out;
+    transition: all 0.3s easy-in-out;
+    background-color: white;
+
+}
+
+.header-burger-active {
+    background-color: white;
+    flex-direction: column;
+}
+
+.header-burger-active a {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-burger-active {
+    align-self: flex-start;
+}
+
+.burger-menu {
+    display: none;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+
+}
+
 
 /* Footer **/
 .footer-content {
@@ -273,17 +325,9 @@ footer {
     padding: 10px 0 0 10px;
 }
 
-.burger-menu {
-    display: none;
-}
-
 .footer-links-small {
     display: none;
     list-style: none;
-}
-
-@media(max-width: 1600px) {
-    
 }
 
 
@@ -293,7 +337,7 @@ footer {
         padding: 0 0 0 10px;
     }
 
-    .header nav a:last-child {
+    .nav a:last-child {
         margin-left: unset;
     }
 
@@ -306,16 +350,46 @@ footer {
     }
 }
 
-@media(max-width: 640px){
-    .header nav a {
+@media(max-width: 640px) {
+    .nav {
         display: none;
     }
 
     .burger-menu {
         display: block;
-        margin-left: auto;
-        margin-right: 5%;
+        align-self: flex-start;
     }
+
+    .nav-burger-active {
+        display: flex;
+        position: fixed;
+        padding: 30px 0 30px 10px;
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        top: 75px;
+        gap: 15px;
+        left: 0;
+        right: 0;
+        overflow: auto;
+        z-index: 2;
+    }
+
+    .nav-burger-active a {
+        color: black;
+    }
+
+    .header-active {
+        background-color: white;
+        color: black;
+    }
+
+
+    .watch-animal-call-to-action h2 {
+        z-index: 0;
+    }
+
+
 
     .footer-subscribe-form {
         display: none;
