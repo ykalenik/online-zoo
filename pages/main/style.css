@@ -534,6 +534,10 @@
     margin-top: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media(max-width: 1600px) {
 
     .watch-animal-call-to-action {
